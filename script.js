@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', createFloatingHeartsPNG);
 // Function to add a love message to console (Easter egg)
 console.log('%c💖 For the most amazing person in my universe 💖', 
     'color: #ff4d6d; font-size: 18px; font-weight: bold;');
-console.log('%cThis website is made with love for Valentine\'s Day 2024', 
+console.log('%cThis website is made with love for Valentine\'s Day 2026', 
     'color: #ffafcc; font-size: 14px;');
 
 // ===========    POPUP SECOND PAGE   ================ 
