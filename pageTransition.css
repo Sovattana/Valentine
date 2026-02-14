@@ -1,0 +1,62 @@
+/* Petal Transition Overlay */
+.petal-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Allows clicking through when not active */
+    z-index: 9999; /* Highest z-index to cover everything */
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.petal-transition-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Individual Petal */
+.petal {
+    position: absolute;
+    width: 80px; /* Adjust based on your PNG size */
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+    pointer-events: none;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Flower Petal PNG - replace with your image path */
+.petal-style-1 {
+    background-image: url('assets/photo/red-rose-petal-isolated-white_392895-87676-removebg-preview.png');
+}
+
+/* Optional: Add different petal styles if you have multiple images */
+.petal-style-2 {
+    background-image: url('assets/photo/red-rose-petal-isolated-white_392895-87676-removebg-preview.png');
+    transform: scale(0.8) rotate(180deg);
+}
+* {
+    -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+/* Optional: Add transition end listener reset */
+.page.transition-end {
+    transform: none !important;
+    transition: none !important;
+}
+
